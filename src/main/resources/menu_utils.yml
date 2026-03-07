@@ -1,0 +1,13 @@
+items:
+  back:
+    type: KNOWLEDGE_BOOK
+  close:
+    type: KNOWLEDGE_BOOK
+  next:
+    type: PAPER
+  previous:
+    type: PAPER
+  confirm:
+    type: LIME_STAINED_GLASS_PANE
+  cancel:
+    type: RED_STAINED_GLASS_PANE

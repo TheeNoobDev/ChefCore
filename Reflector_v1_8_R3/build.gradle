@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'net.chefcraft.reflection.version'
+Project coreProject = project(':')
+version = coreProject.version
+
+repositories {
+    mavenCentral()
+    flatDir { dirs '../libs' }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+dependencies {
+    implementation 'org.jetbrains:annotations:26.0.2'
+    compileOnly files(coreProject.sourceSets.main.output)
+    compileOnly name: 'spigot-1.8.8'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

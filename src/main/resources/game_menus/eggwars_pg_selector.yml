@@ -1,0 +1,96 @@
+permission: ''
+contentsPrefixKey: eggwars_menu.contents
+titleKey: eggwars_menu.subTitles.privateGames
+type: CHEST
+rows: 6
+updateDelay: 0
+minigame: EGGWARS
+mapSelectorType: PRIVATE
+waitingSlots: [9, 10, 11, 12, 18, 19, 20, 21, 27, 28, 29, 30, 36, 37, 38, 39]
+ingameSlots: [14, 15, 16, 17, 23, 24, 25, 26, 32, 33, 34, 35, 41, 42, 43, 44]
+dynamicGameItem:
+  waiting:
+    name: eggwars_menu.waitingContent.name
+    lore: eggwars_menu.waitingContent.lore
+  ingame:
+    name: eggwars_menu.ingameContent.name
+    lore: eggwars_menu.ingameContent.lore
+contents:
+  onlineGlass0:
+    material: LIME_STAINED_GLASS_PANE
+    amount: 1
+    slot: 0
+    nameKey: <KEY>.onlineGlass.name
+    loreKey: <KEY>.onlineGlass.lore
+  onlineGlass1:
+    material: LIME_STAINED_GLASS_PANE
+    amount: 1
+    slot: 1
+    nameKey: <KEY>.onlineGlass.name
+    loreKey: <KEY>.onlineGlass.lore
+  onlineGlass2:
+    material: LIME_STAINED_GLASS_PANE
+    amount: 1
+    slot: 2
+    nameKey: <KEY>.onlineGlass.name
+    loreKey: <KEY>.onlineGlass.lore
+  onlineGlass3:
+    material: LIME_STAINED_GLASS_PANE
+    amount: 1
+    slot: 3
+    nameKey: <KEY>.onlineGlass.name
+    loreKey: <KEY>.onlineGlass.lore
+  empty4:
+    material: WHITE_STAINED_GLASS_PANE
+    amount: 1
+    slot: 4
+    nameKey: <KEY>.empty.name
+    loreKey: <KEY>.empty.lore
+  ingameGlass5:
+    material: RED_STAINED_GLASS_PANE
+    amount: 1
+    slot: 5
+    nameKey: <KEY>.ingameGlass.name
+    loreKey: <KEY>.ingameGlass.lore
+  ingameGlass6:
+    material: RED_STAINED_GLASS_PANE
+    amount: 1
+    slot: 6
+    nameKey: <KEY>.ingameGlass.name
+    loreKey: <KEY>.ingameGlass.lore
+  ingameGlass7:
+    material: RED_STAINED_GLASS_PANE
+    amount: 1
+    slot: 7
+    nameKey: <KEY>.ingameGlass.name
+    loreKey: <KEY>.ingameGlass.lore
+  ingameGlass8:
+    material: RED_STAINED_GLASS_PANE
+    amount: 1
+    slot: 8
+    nameKey: <KEY>.ingameGlass.name
+    loreKey: <KEY>.ingameGlass.lore
+  empty13:
+    material: WHITE_STAINED_GLASS_PANE
+    amount: 1
+    slot: 13
+    nameKey: <KEY>.empty.name
+    loreKey: <KEY>.empty.lore
+  empty22:
+    material: WHITE_STAINED_GLASS_PANE
+    amount: 1
+    slot: 22
+    nameKey: <KEY>.empty.name
+    loreKey: <KEY>.empty.lore
+  empty31:
+    material: WHITE_STAINED_GLASS_PANE
+    amount: 1
+    slot: 31
+    nameKey: <KEY>.empty.name
+    loreKey: <KEY>.empty.lore
+  empty40:
+    material: WHITE_STAINED_GLASS_PANE
+    amount: 1
+    slot: 40
+    nameKey: <KEY>.empty.name
+    loreKey: <KEY>.empty.lore

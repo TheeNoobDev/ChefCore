@@ -1,0 +1,10 @@
+namespaceID: rainbow
+permission: kill_messages.rainbow
+prefixKey: kill_messages.rainbow
+menuItem: POPPY
+nameKey: <KEY>.name
+loreKey: <KEY>.lore
+rarity: LEGENDARY
+messageNodes:
+  self: <KEY>.<TYPE>.self
+  killer: <KEY>.<TYPE>.killer

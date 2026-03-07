@@ -1,0 +1,30 @@
+{
+	"enabled": true,
+	"center_text": true,
+	
+	//as json array
+	"first_line": ["<white><bold>ChefVortex Network <green>1.19.3+", "<yellow><bold>ChefVortex Network <green>1.19.3+"],
+	"second_line": ["<light_purple><bold>EGGWARS<reset><white>, <red><bold>BEDWARS<reset><white> & <yellow><bold>CHEFWARS<reset><white>", "<red><bold>EGGWARS<reset><white>, <aqua><bold>BEDWARS<reset><white> & <gold><bold>CHEFWARS<reset><white>"],
+	
+	//This is for versions that do not support hex color and unicode char
+	"legacy_first_line": ["<white><bold>ChefVortex Network <green>1.19.3+"],
+	"legacy_second_line": ["<light_purple><bold>EGGWARS<reset><white>, <red><bold>BEDWARS<reset><white> & <yellow><bold>CHEFWARS<reset><white>"],
+	
+	"max_players": {
+		"unlimited": false,
+		"value": 250
+	},
+	
+	"player_count": {
+		"modify": false,
+		"value": 5
+	},
+	
+	"server_icon": {
+		"enabled": true,
+		"file_name": "motd/server-icon.png"
+	},
+	
+	"incompatible_version_text": "1.8.9+",
+	"minimum_supported_version": "1.8.9"
+}

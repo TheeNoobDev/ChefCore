@@ -1,0 +1,57 @@
+#If luckperms is installed, you can set the group names by typing them here.
+#If not, it will automatically return to default.
+
+#If you are not using luckperms, you can set the name tag
+#format by typing the name of the player you want here.
+
+#You can also use PlaceholderAPI placeholders here
+formats:
+  ChefRido:
+    player_list_prefix: '&a&l[Developer] &e☕ &a{PLAYER_NAME}'
+    player_list_suffix: ' &e☕'
+    name_tag_prefix: '&e☕ &a'
+    name_tag_suffix: ' &e☕'
+    
+    #Bukkit's player display name (This format is for chat messages or external plugins (Ex. plugins: Essentials, EggWars))
+    #For some games, we do not recommend deleting the {EXTRA} placeholder. For example, if you delete this in Eggwars, the player's chat name will not take on the team's colour.
+    display_name: '&e☕ {EXTRA}{PLAYER_NAME} &e☕'
+    #Min value: 0 -> Appears at the top of the player list
+    #Max value: 999 -> Appears at the bottom of the player list
+    tab_height: 1
+  
+  #Custom luckperms metadata values includes GameCore's defaults
+  #If you want to use them you must create these metadata in luckperms:
+  #-> prefix
+  #-> suffix-first
+  #-> suffix-second
+  #-> prefix-color
+  #-> suffix-color
+  #-> username-color
+  #-> message-color
+  #-> tab-height 
+  #If you add tab-height as metadata here it will use it but 
+  #if you specify the tab height here it will override luckperms
+  core_luckperms_hook_example:
+    player_list_prefix: '{PREFIX} {SUFFIX_COLOR}{SUFFIX_FIRST} {USERNAME_COLOR}{PLAYER_NAME}'
+    player_list_suffix: '{PREFIX} {SUFFIX_COLOR}{SUFFIX_FIRST} {USERNAME_COLOR}'
+    name_tag_prefix: ' {SUFFIX_COLOR}{SUFFIX_SECOND}'
+    name_tag_suffix: ' {SUFFIX_COLOR}{SUFFIX_SECOND}'
+    display_name: '{SUFFIX_COLOR}{SUFFIX_FIRST} {EXTRA}{PLAYER_NAME} {SUFFIX_COLOR}{SUFFIX_SECOND}'
+    
+  papi_hook_example:
+    player_list_prefix: '%vault_prefix% {PLAYER_NAME}'
+    player_list_suffix: ' %vault_suffix%'
+    name_tag_prefix: '%vault_prefix% '
+    name_tag_suffix: ' %vault_suffix%'
+    display_name: '{EXTRA}{PLAYER_NAME}'
+    tab_height: 10 
+  
+  #Please do not remove this. You can edit this but do not remove this!
+  #If you remove this, the plugin may break.
+  default:
+    player_list_prefix: '&7&l[Default] &7{PLAYER_NAME}'
+    player_list_suffix: ''
+    name_tag_prefix: '&7'
+    name_tag_suffix: ''
+    display_name: '{EXTRA}{PLAYER_NAME}'
+    tab_height: 99

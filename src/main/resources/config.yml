@@ -1,0 +1,91 @@
+server_name: ''
+load_example_configurations: true
+database:
+  #MySQL driverUrl example: 'jdbc:mysql://{host}:{port}/{database name}?useSSL=false&autoReconnect=true'
+  driver_url: 'jdbc:sqlite:{FILE_DIRECTORY}.db'
+  username: 'root'
+  password: 'password'
+  tableName: 'gamecore_playersdata'
+games_data_bridge:
+  driver_url: 'jdbc:sqlite:{FILE_DIRECTORY}_games_data.db'
+  username: 'root'
+  password: 'password'
+server_restarter:
+  enabled: false
+  clock: 04:15
+  clock_format: HH:mm
+data_bridge:
+  enable_for_EggWars: false
+  socket:
+    is_game_server: false
+    host: 127.0.0.1
+    port: 2456
+language:
+  default_lang: en_us
+  
+  # <Name, Locale, Region> 
+  list:
+  - 'English, en_us, United States'
+  - 'Türkçe, tr_tr, Türkiye'
+
+disable_join_quit_messages: true
+disable_insecure_chat_message_popup: true
+disable_vanilla_advancements: true
+disable_proxy_party_listener: false
+
+chat:
+  enabled: true
+  # All included placeholders
+  # {PREFIX}
+  # {SUFFIX_FIRST}
+  # {SUFFIX_SECOND}
+  # {PREFIX_COLOR}
+  # {SUFFIX_COLOR}
+  # {USERNAME_COLOR}
+  # {MESSAGE_COLOR}
+  # {PLAYER_NAME}
+  # {DISPLAY_NAME}
+  format: '&7{PREFIX}{DISPLAY_NAME}&f: {MESSAGE_COLOR}{MESSAGE}'
+  
+nicknamer:
+  enabled: true
+
+name_tag_service:
+  enabled: true
+  
+  #Delay in receiving name tag packets when players enter the server.
+  #Sometimes we upload texture packs to servers and at that time 
+  #players do not receive the packets and name tags may not work properly.
+  #->Default: 5 ticks
+  #->For disable: 0 tick
+  display_delay: 5
+  
+global_configurations:
+  enabled: false
+
+  #Example directory: 'C:\Users\Rido\Desktop\game_core_configs'
+  directory: ''
+  
+  enable_for:
+    cages: false
+    game_menus: false
+    kill_messages: false
+    languages: false
+    menus: false
+    level_manager: false
+    name_tags: false
+    sounds: false
+    symbols: false
+    menu_utils: false
+    
+#Aka TAB list
+player_list:
+  enabled: true
+  
+  #Delay in receiving player list packets when players enter the server.
+  #Sometimes we upload texture packs to servers and at that time 
+  #players do not receive the packets and player list may not work properly.
+  #->Default: 10 ticks
+  #->For disable: 0 tick
+  display_delay: 10
+  

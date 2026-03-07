@@ -1,0 +1,5 @@
+enabled: false
+progress_bar_format: '>>>>>>>>>>>>>>>>'
+progress_color: 'a'
+required_color: '7'
+level_bar_multiplier: 500.0

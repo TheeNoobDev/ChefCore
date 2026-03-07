@@ -1,0 +1,10 @@
+namespaceID: default
+permission: ''
+prefixKey: kill_messages.default
+menuItem: PAPER
+nameKey: <KEY>.name
+loreKey: <KEY>.lore
+rarity: COMMON
+messageNodes:
+  self: <KEY>.<TYPE>.self
+  killer: <KEY>.<TYPE>.killer

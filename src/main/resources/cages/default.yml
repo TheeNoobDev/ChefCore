@@ -1,0 +1,35 @@
+namespaceID: default
+prefixKey: cages.default
+permission: ''
+rarity: COMMON
+positionModifier: 0;0;0 #X, Y, Z
+animated: false
+animation:
+  radius: 0.2
+  interval: 10 #ticks
+  type: NONE
+menuItem:
+  material: GLASS
+  nameKey: <KEY>.name
+  loreKey: <KEY>.lore
+#max layer 10
+layers:
+  '1':
+  - '5;GLASS:0'
+  '2':
+  - '2;GLASS:0'
+  - '4;GLASS:0'
+  - '6;GLASS:0'
+  - '8;GLASS:0'
+  '3':
+  - '2;GLASS:0'
+  - '4;GLASS:0'
+  - '6;GLASS:0'
+  - '8;GLASS:0'
+  '4':
+  - '2;GLASS:0'
+  - '4;GLASS:0'
+  - '6;GLASS:0'
+  - '8;GLASS:0'
+  '5':
+  - '5;BARRIER:0'

@@ -1,0 +1,136 @@
+permission: core.menu.lang
+openCommand: setLang
+titleKey: menus.lang.title
+contentsPrefixKey: menus.lang.contents
+# Available Types: CHEST, HOPPER
+type: CHEST
+rows: 3
+#Updates title, item & lore names | 0 = disabled, EX: 20 tick = 1 second
+updateDelay: 0
+itemStates:
+- <PLAYER_LOCALE>_selected
+contents:
+# example_all_functions:
+  # nameKey: menus.lang.contents.sword.name
+  # loreKey: menus.lang.contents.sword.lore
+  # slot: 0
+  # material: IRON_SWORD
+  # durability: 58
+  # amount: 1
+  # isEnchanted: true
+  # enchants:
+  # - 'DAMAGE_ALL;10000'
+  # itemFlags:
+  # - HIDE_ATTRIBUTES
+  # useOwnHead: true or false
+  # clickActions:
+    # CONNECT -> BungeeCord, connect to server EX: CONNECT eggwars
+    # MSG -> Sends message to player (supports chat colors and hex colors) EX: MSG "&aHi! 6&lThis is lang message."
+    # MSG_KEYED -> Sends msg according to the player's language EX: MSG_KEYED "messages.lang"
+    # SOUND -> Plays a sound.[SOUND;volume;pitch] EX: SOUND BLOCK_NOTE_PLING;1;0.5
+    # SOUND_KEYED -> Plays a sound from 'sounds.yml' EX: SOUND_KEYED click
+    # COMMAND -> Executes a command by the player. EX: COMMAND minecraft:clear <PLAYER>
+    # CONSOLE -> Executes a command by the console. EX: CONSOLE minecraft:kick <PLAYER>
+    # CLOSE -> Closes a specific menu(inventory).
+    # UPDATE -> Updates a specific menu(inventory).
+    # right: 
+    # - MSG "&aRight Mouse Button"
+    # left:
+    # - MSG "&bLeft Mouse Button"
+    # middle:
+    # - CLOSE
+    # all:
+    # - SOUND_KEYED click
+  tr_tr_glass:
+    nameKey: <KEY>.tr_tr.unselected.name
+    loreKey: <KEY>.tr_tr.unselected.lore
+    slot: 2
+    material: RED_STAINED_GLASS_PANE
+    amount: 1
+    clickActions:
+      all:
+      - CONSOLE core setLang tr_tr <PLAYER>
+      - SOUND_KEYED click
+    itemStates:
+      tr_tr_selected:
+        nameKey: <KEY>.tr_tr.selected.name
+        loreKey: <KEY>.tr_tr.selected.lore
+        material: LIME_STAINED_GLASS_PANE
+        clickActions:
+          all:
+          - MSG_KEYED "language.alreadySelected"
+          - SOUND_KEYED error
+  en_us_glass:
+    nameKey: <KEY>.en_us.unselected.name
+    loreKey: <KEY>.en_us.unselected.lore
+    slot: 6
+    material: RED_STAINED_GLASS_PANE
+    amount: 1
+    clickActions:
+      all:
+      - CONSOLE core setLang en_us <PLAYER>
+      - SOUND_KEYED click
+    itemStates:
+      en_us_selected:
+        nameKey: <KEY>.en_us.selected.name
+        loreKey: <KEY>.en_us.selected.lore
+        material: LIME_STAINED_GLASS_PANE
+        clickActions:
+          all:
+          - MSG_KEYED "language.alreadySelected"
+          - SOUND_KEYED error
+  tr_tr:
+    nameKey: <KEY>.tr_tr.unselected.name
+    loreKey: <KEY>.tr_tr.unselected.lore
+    slot: 11
+    material: PLAYER_HEAD
+    skullValue: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTg1MmI5YWJhMzQ4MjM0ODUxNGMxMDM0ZDBhZmZlNzM1NDVjOWRlNjc5YWU0NjQ3Zjk5NTYyYjVlNWY0N2QwOSJ9fX0=
+    amount: 1
+    clickActions:
+      all:
+      - CONSOLE core setLang tr_tr <PLAYER>
+      - SOUND_KEYED click
+    itemStates:
+      tr_tr_selected:
+        nameKey: <KEY>.tr_tr.selected.name
+        loreKey: <KEY>.tr_tr.selected.lore
+        skullValue: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTg1MmI5YWJhMzQ4MjM0ODUxNGMxMDM0ZDBhZmZlNzM1NDVjOWRlNjc5YWU0NjQ3Zjk5NTYyYjVlNWY0N2QwOSJ9fX0=
+        clickActions:
+          all:
+          - MSG_KEYED "language.alreadySelected"
+          - SOUND_KEYED error
+  en_us:
+    nameKey: <KEY>.en_us.unselected.name
+    loreKey: <KEY>.en_us.unselected.lore
+    slot: 15
+    material: PLAYER_HEAD
+    skullValue: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q5MTQ1Njg3N2Y1NGJmMWFjZTI1MWU0Y2VlNDBkYmE1OTdkMmNjNDAzNjJjYjhmNGVkNzExZTUwYjBiZTViMyJ9fX0=
+    amount: 1
+    clickActions:
+      all:
+      - CONSOLE core setLang en_us <PLAYER>
+      - SOUND_KEYED click
+    itemStates:
+      en_us_selected:
+        nameKey: <KEY>.en_us.selected.name
+        loreKey: <KEY>.en_us.selected.lore
+        skullValue: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q5MTQ1Njg3N2Y1NGJmMWFjZTI1MWU0Y2VlNDBkYmE1OTdkMmNjNDAzNjJjYjhmNGVkNzExZTUwYjBiZTViMyJ9fX0=
+        clickActions:
+          all:
+          - MSG_KEYED "language.alreadySelected"
+          - SOUND_KEYED error
+  close:
+    nameKey: <KEY>.close.name
+    loreKey: <KEY>.close.lore
+    slot: 22
+    material: KNOWLEDGE_BOOK
+    amount: 1
+    clickActions:
+      all:
+      - CLOSE
+      - SOUND_KEYED click
+    
+      
+    
+    
+    

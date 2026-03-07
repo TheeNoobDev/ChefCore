@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'io.papermc.paperweight.userdev' version '2.0.0-beta.19'
+}
+
+group = 'net.chefcraft.reflection.version'
+Project coreProject = project(':')
+version = coreProject.version
+def minecraftVersion = '1.21.10'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "papermc-repo"
+        url = "https://repo.papermc.io/repository/maven-public/"
+    }
+}
+
+dependencies {
+    compileOnly files(project(':').sourceSets.main.output)
+    compileOnly "io.papermc.paper:paper-api:${minecraftVersion}-R0.1-SNAPSHOT"
+    paperweight.paperDevBundle("${minecraftVersion}-R0.1-SNAPSHOT")
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+tasks {
+    compileJava {
+        options.release = 21
+    }
+
+    javadoc {
+        options.encoding = "UTF-8"
+    }
+}
+

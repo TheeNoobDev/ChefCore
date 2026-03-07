@@ -1,0 +1,12 @@
+error: ENDERMAN_TELEPORT;1;1
+successful: NOTE_PLING;1;2
+menuClose: CLICK;1;2
+click: CLICK;1;2
+close: CLICK;1;2
+levelUp: LEVEL_UP;1;0.5
+confirm: LEVEL_UP;1;2
+cancel: CLICK;1;2
+privateGame:
+  ready: LEVEL_UP;10;1.8
+  queue: NOTE_PIANO;10;1.2
+  denied: ENDERMAN_TELEPORT;11;0.5

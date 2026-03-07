@@ -1,0 +1,812 @@
+prefix: ''
+tablist:
+  header:
+  - ''
+  - '&f&lChefCraft'
+  - ''
+  footer:
+  - ''
+  - '   <#c19ff5>&lᴡᴇʙꜱɪᴛᴇ&f ➟ &rwww.chefcraft.net   '
+  - '   <#c19ff5>&lᴅɪꜱᴄᴏʀᴅ&f ➟ &rdiscord.chefcraft.net  '
+  - ''
+serverClock:
+  restarting:
+  - ''
+  - <center>&e⚠ &cThe server will restart in {TIME} &e⚠</center>
+  - ''
+scoreboards:
+  healthBars:
+    withAbsorption: ' &f{ABSORPTION} &e❤ &f{HEALTH} &c❤'
+    withoutAbsorption: ' &f{HEALTH} &c❤'
+    classic: '&c❤' # for legacy scoreboard api
+help:
+- <strikethrough><gradient:#5AA43A:#fdffca:#75C453:#f9fd8b:#f8f903>-=========-</gradient>&r
+  &e&lCore Help <strikethrough><gradient:#5AA43A:#fdffca:#75C453:#f9fd8b:#f8f903>-=========-</gradient>
+- '&f-/core setLang <locale> [player] &7-> &aAllows to set your own language and the
+  language of a different player.'
+- '&f-/core cage &7-> &aShows cage commands.'
+- '&f-/core level &7-> &aShows level commands.'
+- '&f-/core menuBuilder &7-> &aShows menu builder commands.'
+- '&f-/core openMenu &7-> &aOpens the specified menu.'
+- '&f-/core openGameMenu &7-> &aOpens the specified game menu.'
+- '&f-/core openSelectorMenu &7-> &aOpens the specified selector menu.'
+- '&f-/core reload &7-> &aReloads all language files and menus.'
+reload: <#1ced5f>All Language & Menu component reloaded!
+onlyPlayers: <#f74a4a>Only players can use this command!
+onlyLobby: <#f74a4a>You can only use this command in lobbies!
+noPermission: <#f74a4a>You don't have permission!
+playerNotFound: <#f74a4a>No such player found!
+menuNotFound: <#f74a4a>No such Menu found!
+party:
+  help:
+  - '&7&m-=========-&r &e&lParty Help &7&m-=========-&r'
+  - '&f-/party invite <player> &7-> &aInvites the specified player to your party.'
+  - '&f-/party accept <player> &7-> &aAccepts an invitation from the specified player.'
+  - '&f-/party deny <player> &7-> &aRejects the invitation from the specified player.'
+  - '&f-/party setOwner <player> &7-> &aMakes the specified player the party leader.'
+  - '&f-/party kick <player> &7-> &aKicks the specified player to your party.'
+  - '&f-/party disband &7-> &aDisbands the party.'
+  - '&f-/party info &7-> &aShows the status of the party.'
+  - '&f-/party leave &7-> &aLeaves the party.'
+  - '&f-/party chat &7-> &aToggles the party chat.'
+  - '&f-/party help &7-> &aShows this message.'
+  cannotDeny: '&cYou can''t reject a party invitation you didn''t receive.'
+  cannot: '&cYou can''t do this!'
+  mustBeIn: '&cYou have to be in the party to do this!'
+  mustBeOwner: '&cYou cannot do this because you are not a party owner.'
+  alreadyHave: '&cYou already have party!'
+  alreadyInThis: '&cYou already in this party!'
+  cannotSendSelf: '&cYou cannot send party invitation to yourself!'
+  cannotDenySelf: '&cYou cannot reject yourself!'
+  partOf: '&e{PLAYER} &cis already part of your party!'
+  notAvailable: '&cNo such party was found!'
+  acceptFormat: '&a&lACCEPT'
+  denyFormat: '&c&lDENY'
+  inviteSeperator: ' &f| '
+  inviteSent: '&aYou sent party invitation to {PLAYER}&a!'
+  acceptHover: '&aClick to accept!'
+  denyHover: '&cClick to deny!'
+  youAlreadyOwner: '&cYou already own this party!'
+  ownerChanged: '{OWNER} &fbecame the new owner of the Party!'
+  joined: '&7[&a+&7] {PLAYER} &fjoined to your party! &f(&a{CURRENT}&f/&a{MAX}&f)'
+  youJoined: '&aYou have joined {PLAYER}''s &aparty!'
+  left: '&7[&c-&7] {PLAYER} &fleft to your party! &f(&c{CURRENT}&f/&a{MAX}&f)'
+  leftSelf: '&cYou left the party.'
+  full: '&cYou cannot join this party because is full.'
+  cannotInvite: '&cYou cannot send any more invites because your party is full!'
+  invite: '&fYou received a party invitation from {PLAYER}'
+  inviteDenied: '{PLAYER} &crejected the your party invitation.'
+  deniedSelf: '&cYou rejected {PLAYER}''s party invitation.'
+  info:
+  - '&fParty Owner: &a{OWNER}'
+  - '&fParty Size: &a{CURRENT}&f/&a{MAX}'
+  - '&fPlayers: &a{PLAYERS}'
+  disband: '&cYour party has been disbanded!'
+  disbandLeft: '&cYour party has been disbanded because all players have left!'
+  kicked: '{PLAYER} &cwas kicked from your party!'
+  kickedSelf: '&cYou were kicked from the party!'
+  chatEnabled: '&aParty chat has been enabled!'
+  chatDisabled: '&cParty chat has been disabled!'
+  chatFormat: '&f[<#a46df7>&lParty&f] &7{PREFIX}{DISPLAY_NAME}&f: {MESSAGE_COLOR}{MESSAGE}'
+  forLeaveTheGame: '&cYou must be the party leader to leave the game.'
+  commands:
+    usageAccept: '&cUsage: /party accept <player>'
+    usageDeny: '&cUsage: /party deny <player>'
+    usageInvite: '&cUsage: /party invite <player>'
+    usageSetOwner: '&cUsage: /party setOwner <player>'
+    usageKick: '&cUsage: /party kick <player>'
+privateGames:
+  existsPlayer: <#f74a4a>You already have an existing private game request!
+  timeout: <#f74a4a>Your private game request has timed out! No available server found.
+  pendingActionBar: '&fElapsed time:&a {VALUE} &7- &fRequest Status: &6Pending &7-
+    &fMinigame:&a {GAME}'
+  readyActionBar: '&fJoin Code:&a {VALUE} &7- &fRequest Status: &a&lREADY &7- &fMinigame:&a
+    {GAME}'
+  ready: '&aYour private game is ready!'
+  clickToJoin: ' &e[Click here to join]'
+  notFound: <#f74a4a>No such private game has been found.
+  minigameNotFound: <#f74a4a>There is no such minigame type on our server.
+  queue: '&aYour private game request is queued.'
+  clearEmpty: <#f74a4a>You don't have a private game request!
+  clear: '&9Your request for a private game has been withdrawn.'
+  denied: <#f74a4a>Your request was rejected because no such map was found!
+  playerNotFound: '<#f74a4a>Players not sent off the game server: &e{PLAYERS}'
+  commands:
+    help:
+    - '&7&m-=========-&r &e&lPrivate Games Help &7&m-=========-&r'
+    - '&f-/pg join <code> &7-> &aJoins the specified game.'
+    helpAdmin:
+    - '&7&m-=========-&r &e&lPrivate Games Admin Help &7&m-=========-&r'
+    - '&f-/pg join <code> &7-> &aJoins the specified game.'
+    - '&f-/pg create <minigame> <map> &7-> &aCreates new game request to game servers.'
+    - '&f-/pg send <code> <players name> &7-> &aSends players to specified game.'
+    - '&f-/pg cancel &7-> &aWithdraws private game request.'
+    - '&c In-game only:'
+    - '&f-/pg start &7-> &aStarts the current game. (Lobby Only)'
+    - '&f-/pg stop &7-> &aStops the current game. (Lobby Only)'
+    - '&f-/pg settings &7-> &aShows game settings. (Lobby Only)'
+    - '&f-/pg pause &7-> &aPauses the current game. (In-game Only)'
+    - '&f-/pg resume &7-> &aResumes host the current game. (In-game Only)'
+    - '&f-/pg end &7-> &aEnds the game. (In-game Only)'
+    usage:
+      join: '<#f74a4a>Usage: /pg join <code>'
+      create: '<#f74a4a>Usage: /pg create <minigame> <map>'
+      send: '<#f74a4a>Usage: /pg send <code> <players name with spaces>'
+    mustBeIngame: '&cYou can only use this command in the game server.'
+commands:
+  ping: '&fYour latency: {PING}'
+  pingOther: '{PLAYER}''s&f current latency is {PING}'
+  usage:
+    setLang: '&cUsage: /core setLang <locale> [player]'
+    ping: '&cUsage: /ping <players>'
+    openMenu: '&cUsage: /core openMenu <menu name>'
+    openGameMenu: '&cUsage: /core openGameMenu <menu name>'
+    openSelectorMenu: '&cUsage: /core openSelectorMenu <menu name>'
+  nick:
+    help:
+    - '&7&m-=========-&r &e&lNick Namer Help &7&m-=========-&r'
+    - '&f-/nick random &7-> &aReturns a random profile from the server''s nick pool.'
+    - '&f-/nick restore &7-> &aYou return to your original disguise.'
+    - '&f-/nick setskin <username> &7-> &aYou can use a specific player''s skin by
+      typing name.'
+    - '&f-/nick <username> &7-> &aYou can disguise yourself by entering a correct
+      name.'
+    - '&cNick Namer is currently in its experimental version, sometimes errors may
+      occur.'
+    invalid: '&cYou cannot use a player name that contains invalid characters or that
+      already exists in Mojang, and the length of the name you enter must be at least
+      3 and at most 16.'
+    nicked: '&aYou have successfully disguised.'
+    restored: '&eRestored to original appearance.'
+    setSkinUsage: '&cUsage: /nick setskin <username>'
+    skinSetted: '&aYour skin successfully changed.'
+    disabled: <#f74a4a>You cannot use this command because nicknamer is currently
+      disabled!
+menuBuilder:
+  help:
+  - '&7&m-=========-&r &e&lMenu Builder Help &7&m-=========-&r'
+  - '&f-/core menuBuilder scan &7-> &aScans an inventory when you open it.'
+  - '&f-/core menuBuilder cancel &7-> &aForgoes inventory scanning.'
+  - '&f-/core menuBuilder save <give a name> &7-> &aSaves your current scanned inventory
+    as a file.'
+  usageSave: '<#f74a4a>Usage: /core menuBuilder save <give a name>'
+  incorrectParams: <#f74a4a> You are entering incorrect parameters!
+  scannerEnabled: '&eMenu Scanner &aenabled&e, scan a menu!'
+  scannerDisabled: '&eMenu Scanner &cdisabled&e!'
+  scanned: '&aMenu successfully scanned!'
+  saved: '&aMenu successfully saved. &fPath: &7{PATH}'
+  fileExist: <#f74a4a>There is such a menu file, try saving it with a different name!
+  lostScan: <#f74a4a> A scanned menu was not found. Try to scan a menu again!
+language:
+  loading: <#1ced5f>Loading your language...
+  setted: '&fYour language setted to <#1ced5f>{NAME}&f, <#1ced5f>{REGION}&f.'
+  notFound: '<#f74a4a>No such locale was found: &e{INPUT}'
+  settedOther: <#1ced5f>{PLAYER}&f's language is set to <#1ced5f>{LOCALE}&f.
+  alreadySelected: '&cThis language is already selected.'
+bungee:
+  connectionFalied: <#f74a4a>Could not connect to &e{SERVER} <#f74a4a>server.
+  notNow: '&cYou cannot join this game right now, wait a bit.'
+  gameNotFound: '&cNo available game found. Please wait a moment.'
+network:
+  levelSystem:
+    levelUp:
+    - <center><gradient>#f5ec89;0.012;&m<separator></center>                                     </gradient>
+    - ''
+    - '&fYou are now level &a{LEVEL}&f, congratulations!'
+    - ''
+    - <gradient>#f5ec89;0.012;&m<separator>                                     </gradient>
+  disconnected: '{PLAYER} &fdisconnected!'
+  sendingToGame: '&fSending you to the game &a{ID}&f...'
+  connected: '&fYou have connected to the game &a{ID}'
+  rejoined: '{PLAYER} &frejoined!'
+  rejoinDisabled: '&cYou cannot rejoin the game because the rejoin feature is disabled!'
+  connectionError: '&cAn error occurred while joining the game! (State: {STATE})'
+  cannotRejoin: Could not join the last game you played, the game must have finished
+    or expired!
+cageBuilder:
+  usage:
+    all: '&cUsage: /core cage <builder or viewer>'
+    builder: '&cUsage: /core cage builder <create, save, remove> <namespaceID>'
+    viewer: '&cUsage: /core cage viewer <place, remove, removeAll> <namespaceID>(For
+      removeAll does not require a name)'
+  builder:
+    done: '&aBuild completed successfully and saved the config!'
+    posCannotBeNull: '&cYou must choose two corners of the cage!'
+    posTooBig: '&cThe area you have chosen for the cage is too big!'
+    notFound: '&cSuch a cage was not found.'
+    pos1Selected: '&aPosition 1 selected. &7{POS}'
+    pos2Selected: '&aPosition 2 selected. &7{POS}'
+    created: '&fCage builder &a{NAME} &fcreated!'
+    removed: '&cCage builder &f{NAME} &cremoved!'
+  viewer:
+    placed: '&fCage &a{NAME} &fplaced for view!'
+    removed: '&cCage &f{NAME} &cremoved from view!'
+    removedAll: '&cAll cages removed from viewer!'
+    placedEmpty: '&eNo cage to remove from the viewer because there is no placed.'
+menuUtils:
+  closeItem:
+    name: '&6Close'
+    lore:
+    - '&7Click to close'
+  backItem:
+    name: '&6Back'
+    lore:
+    - '&7Click to back'
+  nextItem:
+    name: '&6Next'
+    lore:
+    - '&7Click to open next page'
+  previousItem:
+    name: '&6Previous'
+    lore:
+    - '&7Click to return previous page'
+  confirmItem:
+    name: '&a✔ Confirm'
+    lore: []
+  cancelItem:
+    name: '&c✘ Cancel'
+    lore: []
+  pageFormat: ' Page - '
+  confirmMenuTitle: Do you confirm the action?
+
+timeTranslate:
+  and: ' and '
+  second: ' second'
+  seconds: ' seconds'
+  minute: ' minute'
+  minutes: ' minutes'
+  hour: ' hour '
+  hours: ' hours '
+  day: ' day '
+  days: ' days '
+  year: ' year '
+  years: ' years '
+menus:
+  item:
+    close:
+      name: '&cClose'
+      lore:
+      - '&7Click to close.'
+    back:
+      name: '&6Back'
+      lore:
+      - '&7Click to back.'
+  lang:
+    title: Language Settings
+    contents:
+      tr_tr:
+        unselected:
+          name: '&e&lTürkçe'
+          lore:
+          - '&aDilinizi değiştirmek için tıklayın!'
+        selected:
+          name: '&e&lTürkçe'
+          lore:
+          - '&6Bu dil seçili.'
+      en_us:
+        unselected:
+          name: '&e&lEnglish'
+          lore:
+          - '&aClick to change your language!'
+        selected:
+          name: '&e&lEnglish'
+          lore:
+          - '&6This language selected.'
+      close:
+        name: '&cClose'
+        lore:
+        - '&7Click to close.'
+eggwars_menu:
+  title: EggWars
+  subTitles:
+    privateGames: EggWars Private Games
+    solo: EggWars Solo
+    team: EggWars Team
+    stats: EggWars Statistics
+  waitingContent:
+    name: '&a&l{MAP_NAME} &7- &f&l[{PLAYERS_PER_TEAM}]'
+    lore:
+    - ''
+    - '&fStatus: {STATUS}'
+    - '&fPlayers: &a{CURRENT_PLAYERS}/{MAX_PLAYERS}'
+    - '&fGame ID: &a{GAME_ID}'
+    - ''
+    - '&aClick to join!'
+  ingameContent:
+    name: '&c&l{MAP_NAME} &7- &f&l[{PLAYERS_PER_TEAM}]'
+    lore:
+    - ''
+    - '&fStatus: {STATUS}'
+    - '&fPlayers: &e{CURRENT_PLAYERS}/{MAX_PLAYERS}'
+    - '&fGame ID: &e{GAME_ID}'
+    - ''
+    - '&6Click to spectate!'
+  contents:
+    solo:
+      name: '&e&lSolo EggWars'
+      lore:
+      - ''
+      - '&fCurrent Playing: &a{EGG_SOLO_COUNT}'
+      - ''
+      - '&fLeft-click: &aQuick join'
+      - '&fRight-click: &aOpens map selector'
+    team:
+      name: '&e&lTeam EggWars'
+      lore:
+      - ''
+      - '&fCurrent Playing: &a{EGG_TEAM_COUNT}'
+      - ''
+      - '&fLeft-click: &aQuick join'
+      - '&fRight-click: &aOpens map selector'
+    privateGames:
+      name: '&c&lPrivate Games'
+      lore:
+      - ''
+      - '&fCurrent Playing: &a{EGG_PG_COUNT}'
+      - ''
+      - '&aClick to view available games'
+    stats:
+      name: '&d&lYour Statistics'
+      lore:
+      - '&fComing soon!'
+    onlineGlass:
+      name: '&a↓ Available Games ↓'
+      lore: []
+    ingameGlass:
+      name: '&c↓ Playing ↓'
+      lore: []
+    empty:
+      name: '&f<->'
+      lore: []
+    notFoundAvaible:
+      name: '&cNo available arena found!'
+      lore: []
+    notFoundPlaying:
+      name: '&cNo arena found in the game!'
+      lore: []
+gameStatus:
+  waiting: '&aWaiting...'
+  starting: '&eStarting'
+  counting: '&6In-cages'
+  playing: '&cIn-game'
+  finishing: '&dFinishing'
+  setting: '&3Setting'
+rewardFormats:
+  coin: '&a+{AMOUNT} Coin {TYPE}'
+  coins: '&a+{AMOUNT} Coins {TYPE}'
+  exp: '&b+{AMOUNT} Experience {TYPE}'
+  exps: '&b+{AMOUNT} Experience {TYPE}'
+  type:
+    kill: (Kill)
+    assist: (Assist)
+rarities:
+  common: '&fCommon'
+  uncommon: '&eUncommon'
+  rare: '&bRare'
+  epic: '&dEpic'
+  legendary: '&6Legendary'
+  mythical: '&4Mythical'
+cages:
+  menu:
+    title: Cages
+    locked:
+      name: '&c{NAME}'
+      lore:
+      - '{CAGE_LORE}'
+      - '&fRarity: {RARITY}'
+      - ''
+      - '&cThis cage is locked!'
+    unlocked:
+      name: '{RARITY_COLOR}{NAME}'
+      lore:
+      - '{CAGE_LORE}'
+      - '&fRarity: {RARITY}'
+      - ''
+      - '&eClick to select this cage!'
+    selected:
+      name: '{RARITY_COLOR}{NAME} &f- &a&lSELECTED'
+      lore:
+      - '{CAGE_LORE}'
+      - '&fRarity: {RARITY}'
+      - ''
+      - '&aCurrently selected cage!'
+    cantSelect: '&cThis cage is locked, you cannot select it!'
+    youSelected: '{RARITY_COLOR}{NAME} &fcage selected!'
+    alreadySelected: '&eYou already selected this cage!'
+  default:
+    name: Default
+    lore:
+    - '&7A cage made entirely of glass'
+  heaven:
+    name: Heaven
+    lore:
+    - '&7A masterpiece that looks like it descended from heaven'
+kill_messages:
+  menu:
+    title: Kill Messages
+    exampleVictim: '&7Steve'
+    exampleKiller: '{PLAYER_NAME}'
+    locked:
+      name: '&c{NAME}'
+      lore:
+      - '{MESSAGE_LORE}'
+      - '&fRarity: {RARITY}'
+      - ' '
+      - '&7Some examples:'
+      - ' '
+      - '{EXAMPLE_MESSAGE}'
+      - ' '
+      - '&cThis message is locked!'
+    unlocked:
+      name: '{RARITY_COLOR}{NAME}'
+      lore:
+      - '{MESSAGE_LORE}'
+      - '&fRarity: {RARITY}'
+      - ' '
+      - '&7Some examples:'
+      - ' '
+      - '{EXAMPLE_MESSAGE}'
+      - ' '
+      - '&eClick to select this message!'
+    selected:
+      name: '{RARITY_COLOR}{NAME} &f- &a&lSELECTED'
+      lore:
+      - '{MESSAGE_LORE}'
+      - '&fRarity: {RARITY}'
+      - ' '
+      - '&aCurrently selected message!'
+    cantSelect: '&cThis kill messages is locked, you cannot select it!'
+    youSelected: '{RARITY_COLOR}{NAME} &fkill messages selected!'
+    alreadySelected: '&eYou already selected this kill messages!'
+  killer: Killer
+  assist: Assist
+  assists: Assists
+  actionBarMessage:
+    killed: '&f{KILL_SYMBOL} You killed {VICTIM} {COINS} {EXP} &f{KILL_SYMBOL}'
+    assisted: '&f{KILL_SYMBOL} You assisted {VICTIM} {COINS} {EXP} &f{KILL_SYMBOL}'
+  assistInfo:
+    formatSingle: ' &f(&a+{AMOUNT} assist&f)'
+    formatMultiple: ' &f(&a+{AMOUNT} assists&f)'
+    boxFormat: '&f- {PLAYER} &f-&a {PERCENT}%'
+    hoverBox:
+    - '&f{KILLER_FORMAT}: {KILLER} &f-&a {KILLER_PERCENT}%'
+    - ''
+    - '&f{ASSIST_FORMAT}:'
+    - '{ASSISTS}'
+  chatHealthFormat: '&f &f(&c{KILLER_HEALTH} {HEART_SYMBOL}&f)'
+  healthBoxFormat:
+  - '&f{KILLER}''s current health:'
+  - '{HEALTH_BAR}'
+  default:
+    name: Default
+    lore:
+    - '&7Classic Minecraft''s defaults messages'
+    kill:
+      self:
+      - '{VICTIM} &fwas killed'
+      killer:
+      - '{VICTIM} &fwas killed by {KILLER}'
+    block_explosion:
+      self:
+      - '{VICTIM} &fblew up'
+      killer:
+      - '{VICTIM} &fwas blown up by {KILLER}'
+    contact:
+      self:
+      - '{VICTIM} &fstabbed to slain'
+      killer:
+      - '{VICTIM} &fstabbed to slain by {KILLER}'
+    cramming:
+      self:
+      - '{VICTIM} &fsuffocated to death'
+      killer:
+      - '{VICTIM} &fsuffocated to death by {KILLER}'
+    custom:
+      self:
+      - '{VICTIM} &fdied'
+      killer:
+      - '{VICTIM} &fdied because of {KILLER}'
+    dragon_breath:
+      self:
+      - '{VICTIM} &fwas roasted in dragon''s breath'
+      killer:
+      - '{VICTIM} &fwas roasted in dragon''s breath by {KILLER}'
+    drowning:
+      self:
+      - '{VICTIM} &fdrowned'
+      killer:
+      - '{VICTIM} &fdrowned while trying to escape {KILLER}'
+    entity_sweep_attack:
+      self:
+      - '{VICTIM} &fwas slain'
+      killer:
+      - '{VICTIM} &fwas slain by {KILLER}'
+    entity_attack:
+      self:
+      - '{VICTIM} &fwas slain'
+      killer:
+      - '{VICTIM} &fwas slain by {KILLER}'
+    entity_explosion:
+      self:
+      - '{VICTIM} &fblew up'
+      killer:
+      - '{VICTIM} &fwas blown up by {KILLER}'
+    fall:
+      self:
+      - '{VICTIM} &ffell from a high place'
+      killer:
+      - '{VICTIM} &fwas doomed to fall by {KILLER}'
+    falling_block:
+      self:
+      - '{VICTIM} &fwas squashed by a falling block'
+      killer:
+      - '{VICTIM} &fwas squashed by {KILLER}'
+    fire:
+      self:
+      - '{VICTIM} &fwent up in flames'
+      killer:
+      - '{VICTIM} &fwalked into fire while fighting {KILLER}'
+    fire_tick:
+      self:
+      - '{VICTIM} &fburned to death'
+      killer:
+      - '{VICTIM} &fwas burned to a crisp while fighting {KILLER}'
+    fly_into_wall:
+      self:
+      - '{VICTIM} &fexperienced kinetic energy'
+      killer:
+      - '{VICTIM} &fexperienced kinetic energy while trying to escape {KILLER}'
+    hot_floor:
+      self:
+      - '{VICTIM} &fdiscovered the floor was lava'
+      killer:
+      - '{VICTIM} &fwalked into the danger zone due to {KILLER}'
+    lava:
+      self:
+      - '{VICTIM} &ftried to swim in lava'
+      killer:
+      - '{VICTIM} &ftried to swim in lava to escape {KILLER}'
+    lightning:
+      self:
+      - '{VICTIM} &fwas struck by lightning'
+      killer:
+      - '{VICTIM} &fwas struck by lightning while fighting {KILLER}'
+    magic:
+      self:
+      - '{VICTIM} &fwas killed by magic'
+      killer:
+      - '{VICTIM} &fwas killed by {KILLER} &fusing magic'
+    melting:
+      self:
+      - '{VICTIM} &fmelted to death'
+      killer:
+      - '{VICTIM} &fwas melted by {KILLER}'
+    poison:
+      self:
+      - '{VICTIM} &fwas killed by magic'
+      killer:
+      - '{VICTIM} &fwas killed by {KILLER} &fusing magic'
+    projectile:
+      self:
+      - '{VICTIM} &fwas shot'
+      killer:
+      - '{VICTIM} &fwas shot by {KILLER}'
+    starvation:
+      self:
+      - '{VICTIM} &fstarved to death'
+      killer:
+      - '{VICTIM} &fstarved to death while fighting {KILLER}'
+    suffocation:
+      self:
+      - '{VICTIM} &fsuffocated in a wall'
+      killer:
+      - '{VICTIM} &fsuffocated in a wall while fighting {KILLER}'
+    suicide:
+      self:
+      - '{VICTIM} &fwas killed'
+      killer:
+      - '{VICTIM} &fwas killed by {KILLER}'
+    thorns:
+      self:
+      - '{VICTIM} &fwas hurt'
+      killer:
+      - '{VICTIM} &fwas killed while trying to hurt {KILLER}'
+    void:
+      self:
+      - '{VICTIM} &ffell out of the world'
+      killer:
+      - '{VICTIM} &fdidn''t want to live in the same world as {KILLER}'
+    wither:
+      self:
+      - '{VICTIM} &fwithered away'
+      killer:
+      - '{VICTIM} &fwithered away while fighting {KILLER}'
+    world_border:
+      self:
+      - '{VICTIM} &fleft the confines of this world'
+      killer:
+      - '{VICTIM} &fleft the confines of this world while fighting {KILLER}'
+    dryout:
+      self:
+      - '{VICTIM} &fdied from dehydration'
+      killer:
+      - '{VICTIM} &fdied from dehydration while trying to escape {KILLER}'
+    freeze:
+      self:
+      - '{VICTIM} &ffroze to death'
+      killer:
+      - '{VICTIM} &fwas frozen to death by {KILLER}'
+    sonic_boom:
+      self:
+      - '{VICTIM} &fwas obliterated by a sonically-charged shriek'
+      killer:
+      - '{VICTIM} &fwas obliterated by a sonically-charged shriek whilst trying to
+        escape {KILLER}'
+  rainbow:
+    name: <rainbow>Rainbow</rainbow>
+    lore:
+    - '&7Classic Minecraft''s defaults messages but looks <rainbow>Rainbow</rainbow>'
+    kill:
+      self:
+      - '{VICTIM} <rainbow>was killed</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was killed by</rainbow> {KILLER}'
+    block_explosion:
+      self:
+      - '{VICTIM} <rainbow>blew up</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was blown up by</rainbow> {KILLER}'
+    contact:
+      self:
+      - '{VICTIM} <rainbow>stabbed to slain</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>stabbed to slain by</rainbow> {KILLER}'
+    cramming:
+      self:
+      - '{VICTIM} <rainbow>suffocated to death</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>suffocated to death by</rainbow> {KILLER}'
+    custom:
+      self:
+      - '{VICTIM} <rainbow>died</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>died because of</rainbow> {KILLER}'
+    dragon_breath:
+      self:
+      - '{VICTIM} <rainbow>was roasted in dragon''s breath</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was roasted in dragon''s breath by</rainbow> {KILLER}'
+    drowning:
+      self:
+      - '{VICTIM} <rainbow>drowned</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>drowned while trying to escape</rainbow> {KILLER}'
+    entity_sweep_attack:
+      self:
+      - '{VICTIM} <rainbow>was slain</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was slain by</rainbow> {KILLER}'
+    entity_attack:
+      self:
+      - '{VICTIM} <rainbow>was slain</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was slain by</rainbow> {KILLER}'
+    entity_explosion:
+      self:
+      - '{VICTIM} <rainbow>blew up</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was blown up by</rainbow> {KILLER}'
+    fall:
+      self:
+      - '{VICTIM} <rainbow>fell from a high place</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was doomed to fall by</rainbow> {KILLER}'
+    falling_block:
+      self:
+      - '{VICTIM} <rainbow>was squashed by a falling block</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was squashed by</rainbow> {KILLER}'
+    fire:
+      self:
+      - '{VICTIM} <rainbow>went up in flames</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>walked into fire while fighting</rainbow> {KILLER}'
+    fire_tick:
+      self:
+      - '{VICTIM} <rainbow>burned to death</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was burned to a crisp while fighting</rainbow> {KILLER}'
+    fly_into_wall:
+      self:
+      - '{VICTIM} <rainbow>experienced kinetic energy</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>experienced kinetic energy while trying to escape</rainbow>
+        {KILLER}'
+    hot_floor:
+      self:
+      - '{VICTIM} <rainbow>discovered the floor was lava</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>walked into the danger zone due to</rainbow> {KILLER}'
+    lava:
+      self:
+      - '{VICTIM} <rainbow>tried to swim in lava</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>tried to swim in lava to escape</rainbow> {KILLER}'
+    lightning:
+      self:
+      - '{VICTIM} <rainbow>was struck by lightning</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was struck by lightning while fighting</rainbow> {KILLER}'
+    magic:
+      self:
+      - '{VICTIM} <rainbow>was killed by magic</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was killed by</rainbow> {KILLER} <rainbow>using magic</rainbow>'
+    melting:
+      self:
+      - '{VICTIM} <rainbow>melted to death</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was melted by</rainbow> {KILLER}'
+    poison:
+      self:
+      - '{VICTIM} <rainbow>was killed by magic</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was killed by</rainbow> {KILLER} <rainbow>using magic</rainbow>'
+    projectile:
+      self:
+      - '{VICTIM} <rainbow>was shot</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was shot by</rainbow> {KILLER}'
+    starvation:
+      self:
+      - '{VICTIM} <rainbow>starved to death</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>starved to death while fighting</rainbow> {KILLER}'
+    suffocation:
+      self:
+      - '{VICTIM} <rainbow>suffocated in a wall</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>suffocated in a wall while fighting</rainbow> {KILLER}'
+    suicide:
+      self:
+      - '{VICTIM} <rainbow>was killed</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was killed by</rainbow> {KILLER}'
+    thorns:
+      self:
+      - '{VICTIM} <rainbow>was hurt</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was killed while trying to hurt</rainbow> {KILLER}'
+    void:
+      self:
+      - '{VICTIM} <rainbow>fell out of the world</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>didn''t want to live in the same world as</rainbow> {KILLER}'
+    wither:
+      self:
+      - '{VICTIM} <rainbow>withered away</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>withered away while fighting</rainbow> {KILLER}'
+    world_border:
+      self:
+      - '{VICTIM} <rainbow>left the confines of this world</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>left the confines of this world while fighting</rainbow>
+        {KILLER}'
+    dryout:
+      self:
+      - '{VICTIM} <rainbow>died from dehydration</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>died from dehydration while trying to escape</rainbow>
+        {KILLER}'
+    freeze:
+      self:
+      - '{VICTIM} <rainbow>froze to death</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was frozen to death by</rainbow> {KILLER}'
+    sonic_boom:
+      self:
+      - '{VICTIM} <rainbow>was obliterated by a sonically-charged shriek</rainbow>'
+      killer:
+      - '{VICTIM} <rainbow>was obliterated by a sonically-charged shriek whilst trying
+        to escape</rainbow> {KILLER}'
